@@ -1,4 +1,14 @@
-# Sonic Traces – Vercel deployment
+# Sonic Traces Player
+
+An interactive audio player built for my **Sonic Traces** Tableau visualization.
+
+The extension connects tracks in the visualization with audio previews, allowing users to explore the data not only visually, but through sound.
+
+**Built with:** JavaScript · HTML · CSS · Tableau Extensions API
+
+
+
+## Deployment
 
 1. Copy your existing `tableau.extensions.1.latest.js` into this folder beside `index.html`.
 2. Upload all files and the `api` folder to a new GitHub repository.
