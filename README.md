@@ -1,12 +1,16 @@
 # Sonic Traces Player
 
-An interactive audio player built for my **Sonic Traces** Tableau visualization.
+### A cartography of sound
 
-The extension connects tracks in the visualization with audio previews, allowing users to explore the data not only visually, but through sound.
+**Sonic Traces** is an interactive Tableau visualization exploring six months of listening history across a 24-hour clock.
+
+This repository contains the custom audio extension built for the visualization. It connects tracks in the Tableau view with audio previews, allowing users to explore the data not only visually, but through sound.
+
+**[Explore Sonic Traces on Tableau Public →](https://public.tableau.com/app/profile/janina.grauel/viz/SonicTraces-SoundOn/SonicTraces)**
+
+![Sonic Traces interactive Tableau visualization](sonic_traces.png)
 
 **Built with:** JavaScript · HTML · CSS · Tableau Extensions API
-
-
 
 ## Deployment
 
