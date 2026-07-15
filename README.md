@@ -2,9 +2,13 @@
 
 ### A cartography of sound
 
-**Sonic Traces** is an interactive Tableau visualization exploring six months of listening history across a 24-hour clock.
+**Sonic Traces** is an interactive Tableau data story built from six months of a friend's listening history. Every song is mapped onto a 24-hour clock, revealing recurring listening patterns and the moments they belong to.
 
-This repository contains the custom audio extension built for the visualization. It connects tracks in the Tableau view with audio previews, allowing users to explore the data not only visually, but through sound.
+Viewers can select meaningful moments, explore the songs associated with them, and listen to audio previews directly from the visualization.
+
+To make this possible, I built a custom audio extension that connects the Tableau visualization with track previews. It extends the visual exploration into sound, allowing the data to be experienced rather than only viewed.
+
+By combining **Tableau, JavaScript, interaction, and audio**, the project transforms personal listening data into an editorial data experience.
 
 **[Explore Sonic Traces on Tableau Public →](https://public.tableau.com/app/profile/janina.grauel/viz/SonicTraces-SoundOn/SonicTraces)**
 
