@@ -6,23 +6,40 @@
 
 Viewers can select meaningful moments, explore the songs associated with them, and listen to audio previews directly from the visualization.
 
-To make this possible, I built a custom audio extension that connects the Tableau visualization with track previews. It extends the visual exploration into sound, allowing the data to be experienced rather than only viewed.
+To make this possible, I built a custom audio extension that connects the Tableau visualization with track previews. A Python script matches tracks from the original listening data with Deezer and prepares the information required by the player.
 
-By combining **Tableau, JavaScript, interaction, and audio**, the project transforms personal listening data into an editorial data experience.
+By combining **data preparation, visualization, interaction and sound**, the project turns personal listening data into an exploratory data experience.
 
 **[Explore Sonic Traces on Tableau Public →](https://public.tableau.com/app/profile/janina.grauel/viz/SonicTraces-SoundOn/SonicTraces)**
 
-![Sonic Traces interactive Tableau visualization](sonic_traces.png)
+![Sonic Traces](sonic_traces.png)
 
-**Built with:** JavaScript · HTML · CSS · Tableau Extensions API
+## How it works
+
+The project combines Python, Tableau and a custom JavaScript extension:
+
+1. **Python** processes the listening data and matches tracks with Deezer to retrieve the information required for audio previews.
+2. **Tableau** maps the listening history onto a 24-hour radial visualization and provides the interactive exploration.
+3. **JavaScript** connects selections in Tableau to the custom audio player.
+4. The **Tableau Extensions API** enables communication between the visualization and the player.
+
+This creates a connection between the visual patterns in the listening history and the music behind the data.
+
+## Tools
+
+`Python` · `Tableau` · `JavaScript` · `HTML` · `CSS` · `Tableau Extensions API`
+
+## Repository structure
+
+- `update_sonic_traces_previews.py` — track matching and preparation of Deezer preview data
+- `player.js` — audio player logic and Tableau interaction
+- `index.html` — extension interface
+- `style.css` — player styling
+- `api/` — API functionality used by the player
+- `SonicTracesPlayer_PUBLIC_TEMPLATE.trex` — Tableau extension configuration template
 
 ## Deployment
 
-1. Copy your existing `tableau.extensions.1.latest.js` into this folder beside `index.html`.
-2. Upload all files and the `api` folder to a new GitHub repository.
-3. In Vercel choose Add New → Project, import the repository, framework Other, then deploy.
-4. Test: `https://YOUR-PROJECT.vercel.app/api/deezer-preview?id=143661438`.
-5. Replace `YOUR-VERCEL-PROJECT` in the `.trex` template with the real project name.
-6. Load the new `.trex` in Tableau Desktop and publish again.
+The extension is deployed separately from the Tableau visualization and loaded into Tableau through the `.trex` configuration.
 
-`Radial` needs `deezer_track_id`, `Title`, and `Artist` on Detail.
+For deployment, the project can be hosted on Vercel and the corresponding project URL added to the `.trex` file.
